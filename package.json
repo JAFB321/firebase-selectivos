@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JAFB321/firebase-selectivos/issues"
   },
-  "homepage": "https://github.com/JAFB321/firebase-selectivos#readme"
+  "homepage": "https://github.com/JAFB321/firebase-selectivos#readme",
+  "dependencies": {
+    "firebase": "^9.8.0"
+  }
 }
