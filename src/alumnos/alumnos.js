@@ -1,4 +1,9 @@
-var t = document.querySelector('#alumnoRow'),
+
+
+
+
+  clearTable();
+  let t = document.querySelector('#alumnoRow'),
   td = t.content.querySelectorAll("td");
   let tb = document.querySelector("tbody");
   let clone = "";
@@ -15,7 +20,17 @@ var t = document.querySelector('#alumnoRow'),
 
 }
 
-  
+
+
+
+function clearTable(){
+let tableHeaderRowCount = 1;
+let table = document.querySelector('.table');
+let rowCount = table.rows.length;
+for (let i = tableHeaderRowCount; i < rowCount; i++) {
+    table.deleteRow(tableHeaderRowCount);
+}
+}
   
   
   
