@@ -1,0 +1,43 @@
+body{
+margin: 0;
+padding: 20px;
+font-family: sans-serif;
+
+}
+
+*{
+box-sizing: border-box;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;   
+    position: relative;
+}
+
+.tableContainer{
+    max-height: 70vh;
+    overflow: auto;
+    
+}
+
+.table th, .table td{
+padding: 12px 15px;
+border: 1px solid #ddd;
+text-align: center;
+
+}
+
+.table th{
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.tableContainer .table thead{
+    position: sticky;
+    top: 0;
+}
+
+.table tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
