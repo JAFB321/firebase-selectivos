@@ -65,6 +65,13 @@ function showModal(id, name, lastname, age){
   modal.querySelector('#apellido').value = lastname;
   modal.querySelector('#edad').value = age;
   
+
+
+  //close modal
+  let btnCancelUsr = document.querySelector('#btn_cancelUsr');
+  btnCancelUsr.addEventListener('click', () => {
+  modal.classList.remove('show');
+});
   
 }
 
@@ -91,7 +98,17 @@ init();
   btnAdd.addEventListener('click', () => {
   
   modalAdd.classList.add('show');
+
+  let btnCancelAdd = document.querySelector('#btn_cancelAdd');
+  btnCancelAdd.addEventListener('click', () => { 
+    modalAdd.classList.remove('show');
+  })
+
 });
+
+
+
+
 
 
   /* update button 
