@@ -11,10 +11,15 @@ function init(){
  
   let t = document.querySelector('#alumnoRow'),
   td = t.content.querySelectorAll("td");
+  tr = t.content.querySelector("tr");
   let tb = document.querySelector("tbody");
   let clone = "";
   
   for(let i = 0; i < 100; i++){
+  tr.dataset.id = "1235646565";
+  tr.dataset.name = "Stuff";
+  tr.dataset.lastname = "coro";
+  tr.dataset.age = "22";
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
   td[2].textContent = "coro";
@@ -33,7 +38,7 @@ function selectedRow(){
 
   let index,
   table = document.querySelector('.table');
-  let modal = document.querySelector('#modal_containerusr');
+  
 
 
 for(let i = 0; i < table.rows.length; i++){
@@ -44,14 +49,24 @@ for(let i = 0; i < table.rows.length; i++){
     
     index = this.rowIndex;
     this.classList.toggle("selected");
-    modal.classList.add('show');
-    console.log(table.rows[index].cells[0].innerHTML);
+    showModal(this.dataset.id, this.dataset.name, this.dataset.lastname, this.dataset.age);
+
+    
   }
 
 }
 
 }
 
+function showModal(id, name, lastname, age){
+  let modal = document.querySelector('#modal_containerusr');
+  modal.classList.add('show');
+  modal.querySelector('#nombre').value = name;
+  modal.querySelector('#apellido').value = lastname;
+  modal.querySelector('#edad').value = age;
+  
+  
+}
 
 function clearTable(){
 let tableHeaderRowCount = 1;
