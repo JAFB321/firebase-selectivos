@@ -49,8 +49,12 @@ cursor: pointer;
 
 .test.selected  *{
     background-color: cornflowerblue;
-    transition: all .25s ease-in-out;
+    /* transition: all .25s ease-in-out; */
 }
+
+
+
+
 
 
 /* modals */

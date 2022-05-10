@@ -1,6 +1,7 @@
 function init(){
   
   refreshList();
+ 
   
 }
 
@@ -32,6 +33,7 @@ function selectedRow(){
 
   let index,
   table = document.querySelector('.table');
+  let modal = document.querySelector('#modal_containerusr');
 
 
 for(let i = 0; i < table.rows.length; i++){
@@ -42,10 +44,12 @@ for(let i = 0; i < table.rows.length; i++){
     
     index = this.rowIndex;
     this.classList.toggle("selected");
-    console.log(table.rows[index].cells);
+    modal.classList.add('show');
+    console.log(table.rows[index].cells[0].innerHTML);
   }
 
 }
+
 }
 
 
@@ -57,9 +61,6 @@ for (let i = tableHeaderRowCount; i < rowCount; i++) {
     table.deleteRow(tableHeaderRowCount);
 }
 }
-
-
-
 
 
 
@@ -78,16 +79,7 @@ init();
 });
 
 
-// remove button //
-let modalRemove = document.querySelector('#modal_containerRemove');
-  let btnRemove = document.querySelector('.rmv');
-
-  btnRemove.addEventListener('click', () => {
-  
-    modalRemove.classList.add('show');
-  });
-
-  // update button //
+  /* update button 
 
   let modalUpdate = document.querySelector('#modal_containerUpdate');
   let btnUpdate = document.querySelector('.updt');
@@ -97,11 +89,5 @@ let modalRemove = document.querySelector('#modal_containerRemove');
       modalUpdate.classList.add('show');
   });
 
-  // show button //
-  let modalShow = document.querySelector('#modal_containerShow');
-  let btnShow = document.querySelector('.shw');
-
-  btnShow.addEventListener('click', () => {
-      
-        modalShow.classList.add('show');
-    });
+  */
+ 
