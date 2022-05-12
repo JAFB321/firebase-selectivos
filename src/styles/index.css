@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+    
+    }
+    
+    *{
+    box-sizing: border-box;
+    }
+    
+    .table{
+        width: 100%;
+        border-collapse: collapse;   
+        position: relative;
+    }
+    
+    .tableContainer{
+        max-height: 70vh;
+        overflow: auto;
+        
+    }
+    
+    .table th, .table td{
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    
+    }
+    
+    .table th{
+        background-color: #4CAF50;
+        color: #fff;
+    }
+    
+    .tableContainer .table thead{
+        position: sticky;
+        top: 0;
+    }
+    
+    .table tbody tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+    
+    .test{
+    cursor: pointer;
+    
+    }
+    
+    .test.selected  *{
+        background-color: cornflowerblue;
+        /* transition: all .25s ease-in-out; */
+    }
+    
+    
+    
+    
+    
+    
+    /* modals */
+    
+    .modal-container{
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      opacity: 0;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;  
+      
+      
+    }
+    
+    .modal{
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        padding: 30px 50px;
+        width: 300px;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .modal-container.show{
+        opacity: 1;
+        pointer-events: auto;
+    }
