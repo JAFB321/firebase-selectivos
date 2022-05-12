@@ -4,10 +4,11 @@ import { getDocs, doc, updateDoc, setDoc, deleteDoc, collection, getDoc } from '
 const alumnosDB = collection(firebaseDB, 'alumnos');
 
 export class Alumno {
-    constructor(id, nombre, carrera) {
+    constructor(id, nombre, carrera, edad) {
         this.id = id;
         this.nombre = nombre;
         this.carrera = carrera;
+        this.edad = edad;
     }
 }
 
@@ -20,7 +21,8 @@ export const getAlumnos = async () => {
     const docs = docsRef.docs.map(doc => (new Alumno(
         doc.id,
         doc.data().nombre,
-        doc.data().carrera
+        doc.data().carrera,
+        doc.data().edad
     )));
 
     return docs;
@@ -38,7 +40,8 @@ export const getAlumno = async (id) => {
     const alumno = new Alumno(
         docAlumno.id,
         docAlumno.data().nombre,
-        docAlumno.data().carrera
+        docAlumno.data().carrera,
+        docAlumno.data().edad
     );
     return alumno;
 }
