@@ -18,11 +18,11 @@ function init(){
   for(let i = 0; i < 100; i++){
   tr.dataset.id = "1235646565";
   tr.dataset.name = "Stuff";
-  tr.dataset.lastname = "coro";
+  tr.dataset.major = "ISW";
   tr.dataset.age = "22";
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
-  td[2].textContent = "coro";
+  td[2].textContent = "ISW";
   td[3].textContent = "22";
   
 
@@ -49,7 +49,7 @@ for(let i = 0; i < table.rows.length; i++){
     
     index = this.rowIndex;
     this.classList.toggle("selected");
-    showModal(this.dataset.id, this.dataset.name, this.dataset.lastname, this.dataset.age);
+    showModal(this.dataset.id, this.dataset.name, this.dataset.major, this.dataset.age);
 
     
   }
@@ -58,22 +58,25 @@ for(let i = 0; i < table.rows.length; i++){
 
 }
 
-function showModal(id, name, lastname, age){
+function showModal(id, name, major, age){
   let modal = document.querySelector('#modal_containerusr');
   modal.classList.add('show');
   modal.querySelector('#nombre').value = name;
-  modal.querySelector('#apellido').value = lastname;
+  modal.querySelector('#major').value = major;
   modal.querySelector('#edad').value = age;
   
-
-
-  //close modal
-  let btnCancelUsr = document.querySelector('#btn_cancelUsr');
-  btnCancelUsr.addEventListener('click', () => {
-  modal.classList.remove('show');
-});
-  
+ 
 }
+
+//close modal
+let modal = document.querySelector('#modal_containerusr');
+let btnCancelUsr = document.querySelector('#btn_cancelUsr');
+btnCancelUsr.addEventListener('click', () => {
+modal.classList.remove('show');
+let table = document.querySelector('.table tr.selected');
+table.classList.remove('selected');
+});
+
 
 function clearTable(){
 let tableHeaderRowCount = 1;
@@ -122,4 +125,9 @@ init();
   });
 
   */
+
+
+  // Modal Buttons //
+
+
  
