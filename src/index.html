@@ -4,11 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alumnos</title>
     <link rel="stylesheet" href="./styles/index.css">
-
 </head>
 <body>
+    <div class="tableContainer">
+        <table class="table">
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Carrera</th>
+                <th>Edad</th>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </div>
+
+        <template id="alumnoRow">
+            <tr class="test">
+                <td data-label="ID"></td>
+                <td data-label="Nombre"></td>
+                <td data-label="Carrera"></td>
+                <td data-label="Edad"></td>
+                
+              </tr>
+        </template>
     
+
+
+        <div class="modal-container"  id="modal_containerAdd">
+            <div class="modal">
+                <h1>ID</h1>
+                <input type="text" name="id" placeholder="ID">
+                <h1>Nombre</h1>
+                <input type="text" name="nombre" placeholder="Nombre">
+                <h1>Carrera</h1>
+                <input type="text" name="major" placeholder="Carrera">
+                <h1>Edad</h1>
+                <input type="text" name="edad" placeholder="Edad">
+                <button id="btn_add">Agregar</button>
+                <button id="btn_cancelAdd">Cancelar</button>
+                </div>
+        </div>
+
+        <div class="modal-container"  id="modal_containerusr">
+            <div class="modal">
+                <h1>Nombre</h1>
+                <input type="text" name="nombre" placeholder="Nombre">
+                <h1>Carrera</h1>
+                <input type="text" name="major" placeholder="Carrera">
+                <h1>Edad</h1>
+                <input type="text" name="edad" placeholder="Edad">
+                <input type="hidden" name="id" placeholder="ID" >
+                <button id="btn_edit">Guardar</button>
+                <button id="btn_rmv">Eliminar</button>
+                <button id="btn_cancelUsr">Cancelar</button>
+            </div>
+                
+
+        </div>
+
+        <div class="btnContainer">
+         <button class="add">Agregar</button>
+        </div>
+
+       
 </body>
 </html>
